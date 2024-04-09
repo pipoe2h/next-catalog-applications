@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: nutanix/ndb-operator
+      chart: ndb-operator
       sourceRef:
         kind: HelmRepository
         name: nutanix.github.io
