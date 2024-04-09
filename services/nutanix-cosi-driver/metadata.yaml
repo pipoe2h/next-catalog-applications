@@ -1,5 +1,5 @@
-displayName: Nutanix Database Operator
-description: The NDB Operator is an operator for provisioning and managing databases on Nutanix using the Nutanix Database Service software.
+displayName: Nutanix COSI driver
+description: Nutanix COSI driver for provisioning and consuming Nutanix Objects storage in Kubernetes.
 allowMultipleInstances: false
 category:
   - Data Services
@@ -7,18 +7,16 @@ scope:
   - workspace
 overview: |-
   # Overview
-  The NDB operator automates and simplifies database administration, provisioning, and life-cycle management of NDB on Kubernetes.
+  Nutanix COSI driver is Nutanix specific component that receives requests from the COSI sidecar and calls the appropriate APIs to create buckets, manage their lifecycle and manage access to them.
 
-  NDB operator supports these functionalities:
+  COSI driver supports these operations:
+  - Creation/Deletion of buckets
+  - Granting/Revoking bucket access to individual users
 
-  - Provisioning and deprovisioning a single instance postgres, mssql, sql server, and mongodb database with or without time machine.
-  - Cloning support for the above database engines
-  - Creation of a service for the applications to consume the database within Kubernetes.
-
-  **Note: Only install the NDB operator once per workspace.**
+  **Note: Only install the COSI driver once per workspace.**
 
   ## More Information
-  - [NDB Operator Documentation](https://artifacthub.io/packages/helm/nutanix/ndb-operator)
-  - [Nutanix Database Service Documentation](https://portal.nutanix.com/page/documents/details?targetId=Nutanix-NDB-User-Guide-v2_5:Nutanix-NDB-User-Guide-v2_5)
+  - [COSI Driver Documentation](https://artifacthub.io/packages/helm/cosi-driver-nutanix/cosi-driver-nutanix)
+  - [Nutanix Objects Documentation](https://portal.nutanix.com/page/documents/details?targetId=Objects-v4_3:Objects-v4_3)
 
 icon: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCA0MCA0MCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCI+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0zOS40NCwzMi44NWMuMTIuMS4xNi4yNy4xMS40MS0uMDUuMTUtLjE5LjI0LS4zNS4yNGgtOC4wNWMtLjA5LDAtLjE4LS4wMy0uMjQtLjA5bC04Ljg0LTcuNjVjLS4wOC0uMDctLjEzLS4xNy0uMTMtLjI4cy4wNS0uMjEuMTMtLjI4bDQuMDItMy40OGMuMTQtLjEyLjM1LS4xMi40OSwwbDEyLjg3LDExLjE0Wm0tMTMuMzYtMTQuNTZjLjA3LjA2LjE2LjA5LjI0LjA5cy4xNy0uMDMuMjQtLjA5bDEyLjg3LTExLjE0Yy4xMi0uMS4xNi0uMjcuMTEtLjQxLS4wNS0uMTUtLjE5LS4yNC0uMzUtLjI0aC04LjA1Yy0uMDksMC0uMTguMDMtLjI0LjA5bC04Ljg0LDcuNjVjLS4wOC4wNy0uMTMuMTctLjEzLjI4cy4wNS4yMS4xMy4yOGw0LjAyLDMuNDhabS0xLjY5LDEuNzFjMC0uMTEtLjA1LS4yMS0uMTMtLjI4TDkuMSw2LjU5Yy0uMDctLjA2LS4xNS0uMDktLjI0LS4wOUguOGMtLjE2LDAtLjMuMS0uMzUuMjQtLjA1LjE1LS4wMS4zMS4xMS40MWwxNC44NCwxMi44NUwuNTYsMzIuODVjLS4xMi4xLS4xNi4yNy0uMTEuNDEuMDUuMTUuMTkuMjQuMzUuMjRoOC4wNWMuMDksMCwuMTgtLjAzLjI0LS4wOWwxNS4xNy0xMy4xM2MuMDgtLjA3LjEzLS4xNy4xMy0uMjhaIiBmaWxsPSIjNzg1NWZhIiBpZD0iRmlsbC0xIi8+CiAgPC9zdmc+

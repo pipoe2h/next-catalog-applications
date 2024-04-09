@@ -2,12 +2,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: nutanix-ndb-operator
+  name: ndb-operator
   namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
-      chart: nutanix-ndb-operator
+      chart: ndb-operator
       sourceRef:
         kind: HelmRepository
         name: nutanix.github.io
@@ -21,8 +21,8 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  releaseName: nutanix-ndb-operator
+  releaseName: ndb-operator
   valuesFrom:
     - kind: ConfigMap
-      name: nutanix-ndb-operator-0.5.1-defaults
+      name: ndb-operator-0.5.1-defaults
   targetNamespace: ${releaseNamespace}
