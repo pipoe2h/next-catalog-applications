@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ndb-operator
+      chart: nutanix/ndb-operator
       sourceRef:
         kind: HelmRepository
         name: nutanix.github.io
@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  releaseName: ndb-operator
+  releaseName: nutanix-ndb-operator
   valuesFrom:
     - kind: ConfigMap
       name: ndb-operator-0.5.1-defaults
