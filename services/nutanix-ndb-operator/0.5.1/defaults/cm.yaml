@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nutanix-ndb-operator-0.5.1-defaults
+  namespace: ${releaseNamespace}
+data:
+  values.yaml: |
+    ---
+    replicaCount: 2
