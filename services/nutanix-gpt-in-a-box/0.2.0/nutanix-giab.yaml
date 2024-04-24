@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nutanix-giab
+  namespace: ${releaseNamespace}
+spec:
+  chart:
+    spec:
+      chart: nutanix-giab
+      sourceRef:
+        kind: HelmRepository
+        name: nutanix.github.io
+        namespace: ${workspaceNamespace}
+      version: 0.2.0
+  interval: 15s
+  install:
+    remediation:
+      retries: 30
+    createNamespace: true
+  upgrade:
+    remediation:
+      retries: 30
+  releaseName: nutanix-giab
+  valuesFrom:
+    - kind: ConfigMap
+      name: nutanix-giab-0.2.0-defaults
+  targetNamespace: ${releaseNamespace}
