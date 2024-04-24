@@ -6,6 +6,7 @@ category:
 certifications:
   - certified
   - supported
+  - airgapped
 scope:
   - workspace
 overview: |-

@@ -3,6 +3,10 @@ description: The Container Storage Interface (CSI) Volume Driver for Kubernetes 
 allowMultipleInstances: false
 category:
   - Data Services
+certifications:
+  - certified
+  - supported
+  - airgapped
 scope:
   - workspace
 overview: |-

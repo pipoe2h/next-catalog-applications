@@ -3,6 +3,10 @@ description: The NDB Operator is an operator for provisioning and managing datab
 allowMultipleInstances: false
 category:
   - Data Services
+certifications:
+  - certified
+  - supported
+  - airgapped
 scope:
   - workspace
 overview: |-

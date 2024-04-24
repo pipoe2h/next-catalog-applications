@@ -3,6 +3,10 @@ description: Nutanix COSI driver for provisioning and consuming Nutanix Objects 
 allowMultipleInstances: false
 category:
   - Data Services
+certifications:
+  - certified
+  - supported
+  - airgapped
 scope:
   - workspace
 overview: |-
