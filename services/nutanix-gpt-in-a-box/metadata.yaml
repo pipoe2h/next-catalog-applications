@@ -3,6 +3,9 @@ description: Nutanix GPT-in-a-Box (GIAB) is a new turnkey solution that includes
 allowMultipleInstances: false
 category:
   - artificial-intelligence
+certifications:
+  - certified
+  - supported
 scope:
   - workspace
 overview: |-
