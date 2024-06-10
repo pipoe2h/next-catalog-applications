@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgresql-15.5.4-defaults
+  namespace: ${releaseNamespace}
+data:
+  values.yaml: |
+    ---
+    auth:
+      username: coder
+      password: coder
+      database: coder
+    persistence:
+      size: 10Gi

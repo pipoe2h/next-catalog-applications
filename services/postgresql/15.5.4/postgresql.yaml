@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: postgresql
+  namespace: ${releaseNamespace}
+spec:
+  chart:
+    spec:
+      chart: postgresql
+      sourceRef:
+        kind: HelmRepository
+        name: charts.bitnami.com
+        namespace: ${workspaceNamespace}
+      version: 15.5.4
+  interval: 15s
+  install:
+    remediation:
+      retries: 30
+    createNamespace: true
+  upgrade:
+    remediation:
+      retries: 30
+  releaseName: postgresql
+  valuesFrom:
+    - kind: ConfigMap
+      name: postgresql-15.5.4-defaults
+  targetNamespace: ${releaseNamespace}
