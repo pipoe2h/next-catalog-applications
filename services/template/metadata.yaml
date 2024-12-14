@@ -3,7 +3,7 @@ description:
 category:
   - template
 scope:
-  - workspace
+  - project
 licensing:
 certifications:
 overview: |-
