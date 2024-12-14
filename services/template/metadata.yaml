@@ -1,5 +1,6 @@
 displayName: Template
 description:
+allowMultipleInstances: true
 category:
   - template
 scope:
