@@ -2,6 +2,7 @@ displayName: Template
 description:
 category:
   - template
+type: catalog
 scope:
   - workspace
 licensing:
