@@ -1,12 +1,15 @@
 displayName: Template
 description: Template description
 allowMultipleInstances: true
+type: catalog
 category:
   - template
 scope:
   - project
 licensing:
 certifications:
+  - community
+  - unsupported
 overview: |-
   # Overview
   Template
