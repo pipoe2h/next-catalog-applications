@@ -4,7 +4,7 @@ allowMultipleInstances: true
 category:
   - data-services
 scope:
-  - project
+  - workspace
 licensing:
   - Ultimate
   - Enterprise
