@@ -1,11 +1,11 @@
 displayName: Template
 description: Template description
-allowMultipleInstances: true
+allowMultipleInstances: false
 type: catalog
 category:
   - template
 scope:
-  - project
+  - workspace
 licensing:
 certifications:
   - community
