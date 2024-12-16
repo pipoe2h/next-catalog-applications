@@ -7,20 +7,8 @@ metadata:
 data:
   values.yaml: |
     ---
-    nameOverride: artifact-hub
+    fullnameOverride: artifact-hub
+    dynamicResourceNamePrefixEnabled: true
     hub:
-      ingress:
-        ingressClassName: kommander-traefik
-        rules:
-        - host: artifacthub.kustomize.sslip.io
-          http:
-            paths:
-              - path: /
-                pathType: Prefix
-                backend:
-                  service:
-                    name: artifact-hub-hub
-                    port:
-                      number: 80
       service:
         type: ClusterIP

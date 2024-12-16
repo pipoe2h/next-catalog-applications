@@ -2,18 +2,3 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - cm.yaml
-# replacements:
-#   - source:
-#       kind: Service
-#       namespace: kommander
-#       name: kommander-traefik
-#       fieldPath: status.loadBalancer.ingress.0.ip
-#     targets:
-#       - select:
-#           kind: Ingress
-#           name: artifact-hub-hub
-#           fieldPaths:
-#             - spec.rules.0.host
-#           options:
-#             delimiter: "."
-#             index: 1
