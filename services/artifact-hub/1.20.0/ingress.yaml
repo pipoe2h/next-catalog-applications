@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: artifact-hub-ingress
+  namespace: ${releaseNamespace}
+spec:
+  rules:
+    - host: artifacthub.$(INGRESS_HOST).sslip.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: artifact-hub-hub
+                port:
+                  number: 80
