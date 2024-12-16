@@ -6,10 +6,10 @@ resources:
   - ../../../helm-repositories/artifacthub.github.io
 
 vars:
-  - name: INGRESS_HOST
+  - name: ingress_host
     objref:
       kind: Service
-      name: artifact-hub-ingress
+      name: kommander-traefik
       apiVersion: v1
     fieldref:
       fieldpath: status.loadBalancer.ingress[0].ip

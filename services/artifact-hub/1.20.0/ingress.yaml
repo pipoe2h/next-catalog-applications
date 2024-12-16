@@ -5,7 +5,7 @@ metadata:
   namespace: ${releaseNamespace}
 spec:
   rules:
-    - host: artifacthub.$(INGRESS_HOST).sslip.io
+    - host: artifacthub.${ingress_host}.sslip.io
       http:
         paths:
           - path: /
