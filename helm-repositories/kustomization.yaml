@@ -4,3 +4,5 @@ resources:
   - nutanix.github.io
   - helm.coder.com
   - bitnamicharts
+  - hub.jupyter.org
+  - artifacthub.github.io

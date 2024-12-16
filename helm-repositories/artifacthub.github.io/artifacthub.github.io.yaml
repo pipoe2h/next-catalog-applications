@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: artifacthub.github.io
+  namespace: ${workspaceNamespace}
+spec:
+  url: "${helmMirrorURL:=https://artifacthub.github.io/helm-charts/}"
+  interval: 10m
+  timeout: 1m
