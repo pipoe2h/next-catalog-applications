@@ -4,3 +4,12 @@ resources:
   - helmrelease.yaml
   - ingress.yaml
   - ../../../helm-repositories/artifacthub.github.io
+
+vars:
+  - name: INGRESS_HOST
+    objref:
+      kind: Service
+      name: artifact-hub-ingress
+      apiVersion: v1
+    fieldref:
+      fieldpath: status.loadBalancer.ingress[0].ip
