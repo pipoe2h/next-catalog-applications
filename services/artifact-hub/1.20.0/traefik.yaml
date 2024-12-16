@@ -1,0 +1,28 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: http-redirect-ingressroute
+  namespace: artifact-hub
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: PathPrefix(`/dkp/artifact-hub`) || HostRegexp(`artifact-hub.{subdomain:[0-9.]+}.sslip.io`)
+      kind: Rule
+      middlewares:
+        - name: redirect-to-sslip
+      services:
+        - name: artifact-hub-hub
+          port: 80
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-to-sslip
+  namespace: artifact-hub
+spec:
+  redirectRegex:
+    regex: ^https:\/\/([^\/]+)\/dkp/artifact-hub/(.*)
+    replacement: "https://artifact-hub.$1.sslip.io/"
