@@ -3,11 +3,18 @@ kind: Kustomization
 resources:
   - cm.yaml
 
-vars:
-  - name: ingress_host
-    objref:
+replacements:
+  - source:
       kind: Service
+      namespace: kommander
       name: kommander-traefik
-      apiVersion: v1
-    fieldref:
-      fieldpath: status.loadBalancer.ingress[0].ip
+      fieldPath: status.loadBalancer.ingress[0].ip
+    targets:
+      - select:
+          kind: Ingress
+          name: artifact-hub-hub
+          fieldPaths:
+            - spec.rules.0.host
+          options:
+            delimiter: "."
+            index: 1

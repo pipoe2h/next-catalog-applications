@@ -12,7 +12,7 @@ data:
       ingress:
         ingressClassName: kommander-traefik
         rules:
-        - host: artifacthub.${ingress_host}.sslip.io
+        - host: artifacthub.kustomize.sslip.io
           http:
             paths:
               - path: /
