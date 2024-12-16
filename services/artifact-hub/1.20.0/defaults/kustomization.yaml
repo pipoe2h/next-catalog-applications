@@ -8,7 +8,7 @@ replacements:
       kind: Service
       namespace: kommander
       name: kommander-traefik
-      fieldPath: status.loadBalancer.ingress[0].ip
+      fieldPath: status.loadBalancer.ingress.0.ip
     targets:
       - select:
           kind: Ingress
