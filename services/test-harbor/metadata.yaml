@@ -3,7 +3,7 @@ description: A cloud native registry for storing, signing, and scanning containe
 category:
   - general
 requiredDependencies:
-  - cloudnative-pg
+  - test-cloudnative-pg
 type: platform
 scope:
   - workspace
