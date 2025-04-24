@@ -6,3 +6,16 @@ metadata:
 data:
   values.yaml: |
     foo: bar
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: harbor-app-dashboard-info
+  namespace: ${releaseNamespace}
+  labels:
+    "kommander.d2iq.io/application": "harbor"
+data:
+  name: "Harbor"
+  dashboardLink: "/dkp/harbor"
+  docsLink: "https://goharbor.io/docs/2.12.0/"
+  version: "2.12.0"
