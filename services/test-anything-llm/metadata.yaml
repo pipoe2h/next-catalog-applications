@@ -1,7 +1,7 @@
 displayName: Anything LLM
 description: all-in-one AI application with built-in RAG, AI agents, and more.
 category:
-  - AI
+  - Artificial Intelligence
 type: catalog
 allowMultipleInstances: false
 scope:
